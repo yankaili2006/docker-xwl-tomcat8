@@ -5,6 +5,7 @@ ENV APP_HOME /opt/tomcat
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
+ADD server.xml $APP_HOME/conf/server.xml
 ADD run.sh $APP_HOME/run.sh
 
 CMD ["sh", "run.sh"]
