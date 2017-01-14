@@ -16,4 +16,4 @@ mkdir -p $APP
 
 unzip $WAR -d $APP
 
-sh ./bin/startup.sh | tee log.txt
+./bin/startup.sh
