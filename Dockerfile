@@ -5,6 +5,13 @@ ENV APP_HOME /opt/tomcat
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
+#update system timezone
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ 
+#update application timezone
+RUN echo "Asia/Shanghai" >> /etc/timezone
+
+
 ADD server.xml $APP_HOME/conf/server.xml
 ADD run.sh $APP_HOME/run.sh
 
