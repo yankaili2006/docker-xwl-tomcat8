@@ -14,6 +14,8 @@ wget $NEXUS -O $WAR
 
 mkdir -p $APP
 
-unzip $WAR -d $APP
+unzip $WAR -o -d $APP
 
-./bin/startup.sh
+sh ./bin/startup.sh
+
+tail -f logs/catalina.out
