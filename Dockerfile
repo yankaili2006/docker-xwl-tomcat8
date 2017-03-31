@@ -9,7 +9,7 @@ WORKDIR $APP_HOME
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
  
 #update application timezone
-RUN echo "Asia/Shanghai" >> /etc/timezone
+RUN echo "Asia/Shanghai" > /etc/timezone
 
 
 ADD server.xml $APP_HOME/conf/server.xml
